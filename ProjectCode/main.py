@@ -2,8 +2,11 @@ CovidList = []
 x = 0
 y = int(input('How many days of data are you giving:  '))
 while x < y:
-    usrinput = input('Number for list:  ')
+    usrinput = int(input('Number for list:  '))
     if usrinput == '':
+        print('You have entered an invalid number please try again')
+        exit()
+    if usrinput < 0:
         print('You have entered an invalid number please try again')
         exit()
     CovidList.append(usrinput)
